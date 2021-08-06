@@ -37,3 +37,28 @@ go
 insert into Atendimento (IDVeterinario, IDPet, DataDeAtendimento)
 values (2, 3, '20210508'), (2, 3, '20210608'), (3, 1, '20210708'), (1, 2, '20210908'), (3, 1, '20211008');
 go
+
+insert into Raca (IDTipo, NomeRaca)
+values (2, 'Pastor alemão');
+go
+
+insert into Pet(NomePet, IDDono, IDRaca)
+values ('Boboco', 2, 4);
+go
+
+--Ajustes abaixo
+
+update Veterinario 
+set CRMV = '1111AAAA'
+where NomeVeterinario = 'Célia';
+go
+
+update Veterinario 
+set CRMV = '2222BBBB'
+where NomeVeterinario = 'Bob';
+go
+
+update Veterinario 
+set CRMV = '3333CCCC'
+where NomeVeterinario = 'Adailton';
+go 

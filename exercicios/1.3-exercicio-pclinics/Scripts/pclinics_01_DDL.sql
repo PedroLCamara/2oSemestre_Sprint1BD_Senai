@@ -50,3 +50,10 @@ create table Atendimento(
 	IDVeterinario smallint foreign key references Veterinario(IDVeterinario),
 	DataDeAtendimento date not null
 );
+go 
+
+--Ajustes abaixo
+
+alter table Veterinario
+	 add CRMV varchar(8) not null default('N/A');
+go 

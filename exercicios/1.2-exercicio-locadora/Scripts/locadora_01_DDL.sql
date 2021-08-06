@@ -55,9 +55,9 @@ create table Locacao(
 go
 
 
---Códigos de ajustes já realizados abaixo
+--Códigos de ajustes realizados abaixo
 
-/* alter table Locacao
+alter table Locacao
 drop column DataRetirada;
 
 alter table Locacao
@@ -66,11 +66,11 @@ drop column DataDevolucao;
 alter table Locacao
 drop column StatusDevolucao; */
 
-/*alter table Locacao
+alter table Locacao
 add DataRetirada date not null
 
 alter table Locacao
 add DataDevolucao date not null
 
 alter table Locacao
-add StatusDevolucao varchar(50) not null */
+add StatusDevolucao varchar(50) not null 

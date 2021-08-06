@@ -41,3 +41,33 @@ create table TipoAlbum(
 	IDAlbum smallint foreign key references Album (IDAlbum),
 	IDEstilo smallint foreign key references Estilo (IDEstilo),
 );
+create table Artista(
+	IDArtista smallint primary key identity(1,1),
+	NomeArtista varchar(35) not null
+);
+
+--Ajustes abaixo
+
+alter table Album
+drop column NomeArtista;
+go
+
+alter table Album 
+add IDArtista smallint foreign key references Artista (IDArtista);
+go
+
+alter table Album 
+add	Localização varchar(50) default('Não especificada') not null; 
+go
+
+alter table Album 
+add	DataDeLancamento date default('20210101') not null;
+go
+
+alter table Album 
+add	Tempo smalldatetime not null default('03:50');
+go
+
+alter table Album 
+add	StatusDisponibilidade varchar(50) not null default('não acessível');
+go

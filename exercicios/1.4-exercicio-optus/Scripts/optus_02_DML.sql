@@ -33,3 +33,31 @@ go
 insert into Acesso(IDAlbum, IDUsuario)
 values (2, 3), (2, 1), (2, 2), (1, 2), (3, 3);
 go
+
+insert into Artista(NomeArtista)
+values ('Michael Jackson'), ('Karol Conka'), ('Abba');
+go
+
+update Album
+set IDArtista = 2
+where NomeAlbum = 'Tarde';
+go
+
+update Album
+set IDArtista = 1
+where NomeAlbum = 'Dia';
+go
+
+update Album
+set IDArtista = 3
+where NomeAlbum = 'Noite';
+go
+
+update Album 
+set Tempo = '00:03:00'
+where IDAlbum != 0;
+go
+
+update Album
+set StatusDisponibilidade = 'disponível'
+where IDAlbum = 1 or IDAlbum = 2
