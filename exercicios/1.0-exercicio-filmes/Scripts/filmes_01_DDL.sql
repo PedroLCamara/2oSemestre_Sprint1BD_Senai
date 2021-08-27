@@ -16,3 +16,8 @@ create table Filme(
 	TituloFilme varchar(100) not null,
 );
 go
+
+--Pequenas alterações
+
+ALTER TABLE Genero 
+ADD CONSTRAINT nomes_unique UNIQUE (NomeGenero); 
